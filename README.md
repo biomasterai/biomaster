@@ -1,50 +1,50 @@
-# BioMaster website and brand UI
+# BioMaster
 
-Static website, download entry points, and brand UI reference for BioMaster. The public distribution repository hosts this site through GitHub Pages and publishes installers through GitHub Releases. BioMaster application source code is not included while it remains under review.
+BioMaster is an AI-assisted workbench for bioinformatics research. It brings project files, conversations, computational notebooks, team work, and specialist biology tools into one application. You bring your own LLM provider and remain responsible for checking the data, methods, and scientific conclusions.
 
-## Website
+[Website](https://biomasterai.github.io/biomaster/) · [Download BioMaster 2.0.0 Beta 1](https://github.com/biomasterai/biomaster/releases/tag/v2.0.0-beta.1) · [Installation and first-run guide](https://biomasterai.github.io/biomaster/guide.html)
 
-The English website lives at the repository root. Its current product illustrations use the blue-sidebar/white-workspace appearance of BioMaster 2.0; the historical brand reference remains in `brand-ui/`. It includes:
+## What you can do
 
-- BioMaster 2.0 project model and Chat / Notebook / Team interface illustrations.
-- Biology-specific workbench showcase for Motif, JBrowse 2, Gosling, and SmartFlow, with a guide to opening them from Chat projects. These are English captures of bundled workbenches using demo data, not claims about biological results.
-- BioMaster 1.0 Patterns cover article, publisher links and on-page APA, Vancouver and BibTeX citations with copy buttons.
-- Version-specific contributors and a getting-started guide.
+- **Chat:** Give an agent a research goal, inspect its plan and tool use, and continue the task in a project directory.
+- **Notebook:** Combine Markdown, Python, Bash, and Prompt cells while keeping files and experiment history close to the analysis.
+- **Team:** Organize work as issues, delegate independent tasks, and review results and evidence.
+- **Biology workbenches:** Open Motif for sequences and molecular designs, JBrowse 2 for genome browsing, Gosling for genomic visualization, and SmartFlow for registered workflows. Workbenches open from Chat projects.
 
-Open `index.html` directly, or preview locally:
+BioMaster 2.0 uses separate Chat, Notebook, and Team project types. Choose the type when creating a project; a Notebook or Team project is not interchangeable with a Chat project.
 
-```sh
-python3 -m http.server 8080
-```
+## Download
 
-Then open <http://localhost:8080/>. The site requires no package installation or build step. Logo, font, and Patterns cover assets are local. When the cover cannot load, a link to the publisher's issue page remains available. See [SOURCES.md](SOURCES.md) for attribution.
+The current public version is **2.0.0-beta.1**. Choose the package for the computer that will *run* BioMaster:
 
-### Main files
+| System | Desktop application | WebUI archive |
+| --- | --- | --- |
+| macOS Apple silicon | [Download DMG](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.1/biomaster-2.0.0-beta.1-mac-arm64.dmg) | [Download ZIP](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.1/biomaster-web-2.0.0-beta.1-macos-arm64.zip) |
+| macOS Intel | [Download DMG](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.1/biomaster-2.0.0-beta.1-mac-x64.dmg) | [Download ZIP](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.1/biomaster-web-2.0.0-beta.1-macos-x64.zip) |
+| Ubuntu x64 | [Download DEB](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.1/biomaster-2.0.0-beta.1-linux-amd64.deb) | [Download TAR.GZ](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.1/biomaster-web-2.0.0-beta.1-linux-x64.tar.gz) |
 
-| File | Purpose |
-| --- | --- |
-| `index.html` | Homepage, research and contributors |
-| `guide.html` | Getting-started guide |
-| `styles.css`, `design-tokens.css`, `brand.css`, `site-refresh.css` | Layout, colors, typography and current interface illustrations |
-| `script.js` | Tabs, navigation, citation controls and release links |
-| `site-config.js` | Installer and plugin destinations |
-| `assets/` | Logos, Inter font, Patterns cover and font license |
+The [release page](https://github.com/biomasterai/biomaster/releases/tag/v2.0.0-beta.1) also provides an Ubuntu AppImage, update files, release notes, and [SHA-256 checksums](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.1/SHA256SUMS.txt). Windows is not included in this release.
 
-`site-config.js` keeps repository, installer-release and plugin URLs separate. Installer links point to the BioMaster public distribution repository; optional destinations stay hidden until supplied.
+**Desktop or WebUI?** The desktop package opens BioMaster as an application. The WebUI package runs a BioMaster service on your computer or server and opens its interface in a browser; it is not a stand-alone webpage or a BioMaster-hosted cloud account. For remote use, keep the service private and connect through an SSH tunnel. See the [WebUI setup guide](https://biomasterai.github.io/biomaster/guide.html#launch).
 
-BioMaster 2.0.0-beta.1 desktop and WebUI packages for macOS Apple silicon, macOS Intel, and Ubuntu x64 are available from the [public prerelease](https://github.com/biomasterai/biomaster/releases/tag/v2.0.0-beta.1). The application source code is not included in this repository or its release assets.
+## First run
 
-## Brand UI
+1. On macOS, open the DMG and drag BioMaster to Applications. On Ubuntu, install the DEB with your package installer. For WebUI, extract the archive and run `./biomaster web` from its directory.
+2. Complete the on-screen installation registration. If BioMaster finds earlier local data, choose whether to import it.
+3. Open **Settings → Providers** and connect your LLM provider. You can use a listed provider or add an OpenAI-compatible or Anthropic-compatible endpoint with its base URL, API key, and exact model ID. BioMaster also supports editing its JSONC configuration directly; see the [configuration guide](https://biomasterai.github.io/biomaster/guide.html#connect-file).
+4. Check **Settings → Models**, create a **Chat project**, select your model, and try a small request such as: “List the files in this project and tell me which one you would inspect first. Do not change them.”
 
-[`brand-ui/`](brand-ui/) contains the original **BioMaster Visual System 1.0.0**, supplied from `biomaster-visual-system-20260911`. Its source files are preserved unchanged, excluding macOS metadata.
+Your LLM API key is for the provider you choose; BioMaster does not require you to send it to a BioMaster cloud service. In a remote WebUI setup, the project files and credentials live on the remote host, so use a host you trust.
 
-- [Interactive handbook](brand-ui/index.html)
-- [Brand UI README](brand-ui/README.md)
-- [Visual and development guidelines](brand-ui/GUIDELINES.zh-CN.md)
-- [CSS tokens](brand-ui/tokens.css) and [JSON tokens](brand-ui/tokens.json)
-- [Reference components](brand-ui/components.css)
-- [Campaign templates](brand-ui/templates/)
+Notebook execution may need a configured Python environment and packages. SmartFlow execution requires a suitable Java and Nextflow runtime. Those are feature-specific requirements, not prerequisites for opening the desktop app or WebUI.
 
-With the local server above, open <http://localhost:8080/brand-ui/>. The handbook includes light/dark themes, Chat/Notebook/Team specimens and responsive previews. It is a visual reference; the examples do not execute research tasks.
+## Beta notes and support
 
-The original logo PNGs are retained. Font licensing information is included alongside the Inter files. This sync does not include later unapproved palette proposals.
+- The macOS Intel desktop build is **unsigned**. macOS may block its first launch; after verifying the download and checksum, use Finder’s Control-click → Open flow if needed. Automatic replacement of this unsigned build is not guaranteed.
+- Neither macOS package is advertised as notarized. Keep backups of important project data and verify scientific outputs before relying on them.
+- For installation details, model setup, and remote access, read the [getting-started guide](https://biomasterai.github.io/biomaster/guide.html).
+- For questions or feedback, contact [biomaster@hkust-gz.edu.cn](mailto:biomaster@hkust-gz.edu.cn).
+
+The [BioMaster 1.0 paper in *Patterns*](https://doi.org/10.1016/j.patter.2026.101611) describes the original research system; this release is the subsequent BioMaster 2.0 workbench. The [website](https://biomasterai.github.io/biomaster/#research) provides the citation and makes the version distinction clear.
+
+This is BioMaster’s **public website and compiled-software distribution repository**. The BioMaster application source code is not published here. GitHub’s automatically generated “Source code” archives contain this website repository, not the private application source.
