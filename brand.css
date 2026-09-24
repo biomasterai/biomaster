@@ -1,0 +1,6 @@
+/* Restore the original light composition. The logo assets are unchanged. */
+.brand img,.hero-mark,.agent-answer img{filter:none;mix-blend-mode:normal}
+.cover-unavailable{display:flex;flex-direction:column;justify-content:center;gap:24px;aspect-ratio:591/768;background:var(--white);padding:28px;border:1px solid var(--line);color:var(--muted)}
+.cover-unavailable b{font-size:40px;letter-spacing:-.05em;color:var(--ink)}
+.cover-unavailable>span{font-size:13px;line-height:1.7}
+.cover-unavailable>span:last-child{text-decoration:underline;text-underline-offset:4px}

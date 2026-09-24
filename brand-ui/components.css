@@ -1,0 +1,37 @@
+/* Framework-neutral components. Import tokens.css first. */
+.bm-scope{font-family:var(--bm-font-sans);color:var(--bm-text);background:var(--bm-canvas);font-size:var(--bm-font-body);line-height:1.6}
+.bm-scope *,.bm-scope *::before,.bm-scope *::after{box-sizing:border-box}
+.bm-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:var(--bm-control-md);padding:8px 16px;border:1px solid transparent;border-radius:var(--bm-radius-sm);background:var(--bm-primary);color:var(--bm-on-primary);font:500 13px/1.5 var(--bm-font-sans);text-decoration:none;cursor:pointer;transition:background var(--bm-motion-fast),border-color var(--bm-motion-fast)}
+.bm-button:hover{background:var(--bm-primary-hover)}
+.bm-button.secondary{border-color:var(--bm-control);color:var(--bm-text);background:var(--bm-surface)}
+.bm-button.secondary:hover,.bm-button.ghost:hover{background:var(--bm-subtle)}
+.bm-button.ghost{background:transparent;color:var(--bm-text)}
+.bm-button.accent{background:var(--bm-accent);color:var(--bm-on-accent)}
+.bm-button.accent:hover{background:var(--bm-accent-hover)}
+.bm-button.danger{background:var(--bm-danger-bg);color:var(--bm-danger);border-color:var(--bm-danger)}
+.bm-button.danger:hover{box-shadow:inset 0 0 0 1px var(--bm-danger)}
+.bm-button:active:not(:disabled){box-shadow:inset 0 0 0 2px currentColor}
+.bm-button:disabled{background:var(--bm-subtle);color:var(--bm-muted);border-color:var(--bm-line);cursor:not-allowed;opacity:.65}
+.bm-button.small{min-height:var(--bm-control-sm);padding:4px 12px;font-size:12px}
+.bm-field{display:grid;gap:8px;max-width:440px}.bm-field label{font-weight:500;font-size:13px}
+.bm-field .hint{color:var(--bm-muted);font-size:12px;margin:0}
+.bm-input{width:100%;min-height:var(--bm-control-md);border:1px solid var(--bm-control);border-radius:var(--bm-radius-sm);padding:10px 12px;background:var(--bm-surface);color:var(--bm-text);font:400 14px/1.5 var(--bm-font-sans)}
+.bm-input::placeholder{color:var(--bm-muted);opacity:1}.bm-input[aria-invalid="true"]{border-color:var(--bm-danger)}.bm-field .error{color:var(--bm-danger);font-size:12px;margin:0}
+.bm-check{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:13px}.bm-check input{width:17px;height:17px;accent-color:var(--bm-accent-ink)}
+.bm-status{display:inline-flex;align-items:center;gap:6px;font-size:12px;line-height:1.5;color:var(--bm-muted);white-space:nowrap}
+.bm-status::before{content:'○';font:14px/1 var(--bm-font-mono)}
+.bm-status.running{color:var(--bm-accent-ink)}.bm-status.running::before{content:'◉'}
+.bm-status.success{color:var(--bm-success)}.bm-status.success::before{content:'✓'}
+.bm-status.warning{color:var(--bm-warning)}.bm-status.warning::before{content:'Ⅱ'}
+.bm-status.danger{color:var(--bm-danger)}.bm-status.danger::before{content:'!';font-weight:700}
+.bm-status.info{color:var(--bm-info)}.bm-status.info::before{content:'◇'}
+.bm-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:var(--bm-radius-sm);font-size:12px;background:var(--bm-subtle);color:var(--bm-secondary)}
+.bm-badge.success{background:var(--bm-success-bg);color:var(--bm-success)}.bm-badge.warning{background:var(--bm-warning-bg);color:var(--bm-warning)}.bm-badge.danger{background:var(--bm-danger-bg);color:var(--bm-danger)}.bm-badge.info{background:var(--bm-info-bg);color:var(--bm-info)}
+.bm-alert{display:flex;gap:12px;padding:16px;border-left:3px solid var(--bm-warning);background:var(--bm-warning-bg);color:var(--bm-warning);font-size:13px}.bm-alert p{margin:4px 0 0;line-height:1.6}
+.bm-table{width:100%;border-collapse:collapse;text-align:left;font-size:13px}.bm-table th{font-size:12px;font-weight:500;color:var(--bm-muted);background:var(--bm-subtle)}.bm-table th,.bm-table td{padding:12px 16px;border-bottom:1px solid var(--bm-line);vertical-align:middle}.bm-table tbody tr:hover{background:var(--bm-subtle)}.bm-table .numeric{text-align:right;font-variant-numeric:tabular-nums}
+.bm-tabs{display:flex;border-bottom:1px solid var(--bm-line);gap:24px}.bm-tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:12px 0;color:var(--bm-muted);font:500 13px var(--bm-font-sans);min-height:44px;cursor:pointer}.bm-tabs button[aria-selected="true"]{color:var(--bm-text);border-bottom-color:var(--bm-accent-ink)}
+.bm-code{font:12px/1.8 var(--bm-font-mono);white-space:pre-wrap;overflow-wrap:anywhere;background:var(--bm-subtle);padding:16px;margin:12px 0;border-radius:var(--bm-radius-sm)}.bm-code .comment{color:var(--bm-muted)}.bm-code .keyword{color:var(--bm-info)}.bm-code .string{color:var(--bm-success)}
+.bm-scope :where(button,a,input,textarea,select,summary,[tabindex="0"]):focus-visible{outline:2px solid var(--bm-focus);outline-offset:3px}
+.bm-scope :where(button,a,input,textarea,select){touch-action:manipulation}
+@media(pointer:coarse){.bm-button,.bm-button.small,.bm-input{min-height:var(--bm-touch)}}
+

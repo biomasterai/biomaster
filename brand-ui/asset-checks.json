@@ -1,0 +1,29 @@
+{
+  "index.html": {
+    "unique_ids": 44,
+    "local_and_fragment_links": "pass",
+    "aria_and_label_targets": "pass"
+  },
+  "responsive-check.html": {
+    "unique_ids": 2,
+    "local_and_fragment_links": "pass",
+    "aria_and_label_targets": "pass"
+  },
+  "css_variables": {
+    "used": 39,
+    "unresolved": 0
+  },
+  "approved_logo_sha256": {
+    "loop-b-light.png": "0d1594b0be3464d06f05b16111c54dc50bf9d59d19ae99a799096f4638d352f9",
+    "loop-b-app.png": "60cd90483a20fb03908158d54e72bf38c2dc88621c8e587490cdcbd8c96eeafa"
+  },
+  "svg_templates": {
+    "xml_valid": 3,
+    "logos_embedded_unchanged": true
+  },
+  "generator": {
+    "idempotent": true,
+    "contrast_checks": 62,
+    "passed": 62
+  }
+}
