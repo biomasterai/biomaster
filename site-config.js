@@ -3,6 +3,6 @@
 // Keep optional URLs empty until each destination is available. Empty entries are hidden.
 window.BIOMASTER_SITE = {
   repository: "https://github.com/biomasterai/biomaster",
-  releases: "https://github.com/biomasterai/biomaster/releases/tag/v2.0.0-beta.1",
+  releases: "https://github.com/biomasterai/biomaster/releases/tag/v2.0.0-beta.2",
   plugins: "",
 };

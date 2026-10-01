@@ -1,26 +1,20 @@
-# BioMaster 2.0.0 Beta 1
+# BioMaster 2.0.0 Beta 2
 
-BioMaster 2.0.0-beta.1 is the first public beta distribution of the current desktop and local WebUI workbench. The application source code is not published in this repository or attached to this release.
+This beta updates the macOS desktop and local WebUI builds from the latest `dev` source checked on October 2, 2026 (`b57e50c358c5332050506344b16c2a83d97f99a5`). The verified release build uses source commit `aa1df7e17ac43f5a8bab47f1b637ef091eac1a2c`.
 
-| System | Desktop | Local WebUI |
+| macOS system | Desktop installer | Local WebUI |
 | --- | --- | --- |
-| macOS Apple silicon | `biomaster-2.0.0-beta.1-mac-arm64.dmg` | `biomaster-web-2.0.0-beta.1-macos-arm64.zip` |
-| macOS Intel | `biomaster-2.0.0-beta.1-mac-x64.dmg` | `biomaster-web-2.0.0-beta.1-macos-x64.zip` |
-| Ubuntu x64 | `biomaster-2.0.0-beta.1-linux-amd64.deb` | `biomaster-web-2.0.0-beta.1-linux-x64.tar.gz` |
+| Apple Silicon | `biomaster-2.0.0-beta.2-mac-arm64.dmg` | `biomaster-web-2.0.0-beta.2-macos-arm64.zip` |
+| Intel | `biomaster-2.0.0-beta.2-mac-x64.dmg` | `biomaster-web-2.0.0-beta.2-macos-x64.zip` |
 
-An Ubuntu AppImage is also provided. The macOS ZIPs and blockmaps, and the `beta-mac.yml` / `beta-linux.yml` files, support desktop updates. Use `SHA256SUMS.txt` to verify downloaded assets.
+The desktop ZIPs, blockmaps, and `beta-mac.yml` support beta updates. Verify downloads with `SHA256SUMS.txt`. This release contains macOS builds only.
 
-## First run
+## Install
 
-Desktop: install the package for your architecture and open BioMaster. WebUI: extract the archive, keep its included files together, and run `./biomaster web` from the extracted directory. For a remote host, keep the WebUI private and use an SSH tunnel. See the [installation and model configuration guide](https://biomasterai.github.io/biomaster/guide.html).
-
-Bring your own LLM provider API key. BioMaster provides Chat, Notebook, Team, and biology workbenches. Notebook Python packages and SmartFlow's Java/Nextflow runtime may require separate setup when those features are used.
+Download the DMG for your Mac's processor, open it, and move BioMaster to Applications. To use the local WebUI, extract the matching archive and run `./biomaster web` from its directory. See the [installation and model configuration guide](https://biomasterai.github.io/biomaster/guide.html).
 
 ## Beta limitations
 
-- Windows is not included.
-- The macOS Intel desktop build is unsigned; macOS may block its first launch. After verifying that the DMG came from this release, use Finder's Control-click → Open flow if needed. Automatic replacement of that unsigned build is not guaranteed.
-- macOS notarization has not been confirmed for these beta packages. Gatekeeper may prompt on first launch.
-- This is beta software; keep backups of important project data and review scientific results before relying on them.
+These beta packages are not Developer ID notarized. The Intel app is unsigned; the Apple Silicon app has a development signature. Gatekeeper may prompt on first launch; after verifying the download, use Finder's Control-click → Open flow if needed. Bring your own LLM provider API key and keep backups of important project data.
 
 Questions or feedback: [biomaster@hkust-gz.edu.cn](mailto:biomaster@hkust-gz.edu.cn).

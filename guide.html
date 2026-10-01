@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./brand.css">
   <link rel="stylesheet" href="./site-refresh.css?v=20260924-beta1">
-  <script src="./site-config.js" defer></script>
+  <script src="./site-config.js?v=20261002-beta2" defer></script>
   <script src="./script.js" defer></script>
 </head>
 <body>
@@ -31,10 +31,10 @@
       <article class="guide-article">
         <section id="install">
           <h2>1. Get the right package</h2>
-          <p>BioMaster 2.0.0-beta.1 has separate desktop and WebUI packages for <strong>macOS Apple silicon, macOS Intel, and Ubuntu x64</strong>. Windows is not part of this release. Use the <a class="inline-link" href="./index.html#download">platform-specific download links</a> or the <a class="inline-link" href="https://github.com/biomasterai/biomaster/releases/tag/v2.0.0-beta.1" target="_blank" rel="noopener noreferrer">official release page</a>, and compare downloaded files with its SHA-256 checksums.</p>
+          <p>BioMaster has separate desktop and WebUI packages for <strong>macOS Apple silicon, macOS Intel, and Ubuntu x64</strong>. The latest macOS build is 2.0.0-beta.2; Ubuntu remains at 2.0.0-beta.1. Windows is not included. Use the <a class="inline-link" href="./index.html#download">platform-specific download links</a>, then compare downloaded files with the SHA-256 checksums on the <a class="inline-link" href="https://github.com/biomasterai/biomaster/releases/tag/v2.0.0-beta.2" target="_blank" rel="noopener noreferrer">macOS beta.2 release page</a> or the <a class="inline-link" href="https://github.com/biomasterai/biomaster/releases/tag/v2.0.0-beta.1" target="_blank" rel="noopener noreferrer">Ubuntu beta.1 release page</a>.</p>
           <div class="guide-platforms">
             <div><strong>macOS desktop</strong><p>Choose the <code>mac-arm64.dmg</code> package for Apple silicon or <code>mac-x64.dmg</code> for Intel. Open the DMG, drag <code>BioMaster.app</code> to Applications, then open BioMaster. Keep any older user data until you have chosen whether to import it. The Intel beta is unsigned; macOS may block its first launch. If you trust the verified GitHub download, use Finder's Control-click → Open flow. Neither macOS package is advertised as notarized.</p></div>
-            <div><strong>Ubuntu desktop</strong><p>Choose the <code>linux-amd64.deb</code> package and install it with the graphical package installer, or from its download directory:</p><pre><code>sudo apt install ./biomaster-2.0.0-beta.1-linux-amd64.deb</code></pre><p>An <code>AppImage</code> is also available on the release page; make it executable before opening it.</p></div>
+            <div><strong>Ubuntu desktop</strong><p>Choose the 2.0.0-beta.1 <code>linux-amd64.deb</code> package and install it with the graphical package installer, or from its download directory:</p><pre><code>sudo apt install ./biomaster-2.0.0-beta.1-linux-amd64.deb</code></pre><p>An <code>AppImage</code> is also available on the beta.1 release page; make it executable before opening it.</p></div>
             <div><strong>WebUI — browser or remote server</strong><p>Choose the <code>biomaster-web</code> archive for the computer or server where it will run, then extract it. The interface opens in your browser and is backed by a service on that host—not a BioMaster cloud account. Keep the included <code>biomaster</code>, <code>biomaster-mcp-runtime</code>, and <code>uv</code> files together.</p></div>
           </div>
         </section>

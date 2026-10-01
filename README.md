@@ -2,7 +2,7 @@
 
 BioMaster is an AI-assisted workbench for bioinformatics research. It brings project files, conversations, computational notebooks, team work, and specialist biology tools into one application. You bring your own LLM provider and remain responsible for checking the data, methods, and scientific conclusions.
 
-[Website](https://biomasterai.github.io/biomaster/) · [Download BioMaster 2.0.0 Beta 1](https://github.com/biomasterai/biomaster/releases/tag/v2.0.0-beta.1) · [Installation and first-run guide](https://biomasterai.github.io/biomaster/guide.html)
+[Website](https://biomasterai.github.io/biomaster/) · [Download BioMaster 2.0.0 Beta 2 for macOS](https://github.com/biomasterai/biomaster/releases/tag/v2.0.0-beta.2) · [Installation and first-run guide](https://biomasterai.github.io/biomaster/guide.html)
 
 ## What you can do
 
@@ -15,15 +15,15 @@ BioMaster 2.0 uses separate Chat, Notebook, and Team project types. Choose the t
 
 ## Download
 
-The current public version is **2.0.0-beta.1**. Choose the package for the computer that will *run* BioMaster:
+The current macOS version is **2.0.0-beta.2**. The latest Ubuntu x64 package remains **2.0.0-beta.1**. Choose the package for the computer that will *run* BioMaster:
 
 | System | Desktop application | WebUI archive |
 | --- | --- | --- |
-| macOS Apple silicon | [Download DMG](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.1/biomaster-2.0.0-beta.1-mac-arm64.dmg) | [Download ZIP](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.1/biomaster-web-2.0.0-beta.1-macos-arm64.zip) |
-| macOS Intel | [Download DMG](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.1/biomaster-2.0.0-beta.1-mac-x64.dmg) | [Download ZIP](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.1/biomaster-web-2.0.0-beta.1-macos-x64.zip) |
+| macOS Apple silicon (beta.2) | [Download DMG](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.2/biomaster-2.0.0-beta.2-mac-arm64.dmg) | [Download ZIP](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.2/biomaster-web-2.0.0-beta.2-macos-arm64.zip) |
+| macOS Intel (beta.2) | [Download DMG](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.2/biomaster-2.0.0-beta.2-mac-x64.dmg) | [Download ZIP](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.2/biomaster-web-2.0.0-beta.2-macos-x64.zip) |
 | Ubuntu x64 | [Download DEB](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.1/biomaster-2.0.0-beta.1-linux-amd64.deb) | [Download TAR.GZ](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.1/biomaster-web-2.0.0-beta.1-linux-x64.tar.gz) |
 
-The [release page](https://github.com/biomasterai/biomaster/releases/tag/v2.0.0-beta.1) also provides an Ubuntu AppImage, update files, release notes, and [SHA-256 checksums](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.1/SHA256SUMS.txt). Windows is not included in this release.
+The [macOS beta.2 release](https://github.com/biomasterai/biomaster/releases/tag/v2.0.0-beta.2) provides update files, release notes, and [SHA-256 checksums](https://github.com/biomasterai/biomaster/releases/download/v2.0.0-beta.2/SHA256SUMS.txt). The [Ubuntu beta.1 release](https://github.com/biomasterai/biomaster/releases/tag/v2.0.0-beta.1) provides an AppImage and its own checksums. Windows is not included.
 
 **Desktop or WebUI?** The desktop package opens BioMaster as an application. The WebUI package runs a BioMaster service on your computer or server and opens its interface in a browser; it is not a stand-alone webpage or a BioMaster-hosted cloud account. For remote use, keep the service private and connect through an SSH tunnel. See the [WebUI setup guide](https://biomasterai.github.io/biomaster/guide.html#launch).
 
